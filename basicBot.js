@@ -240,38 +240,38 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "C:/Users/Aidan/Desktop/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "C:/Users/Aidan/Desktop/boten.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "Minionsbot",
             language: "english",
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 1-200
-            startupVolume: 0, // 0-100
+            startupCap: 5, // 1-200
+            startupVolume: 25, // 0-100
             startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
-            maximumAfk: 120,
-            afkRemoval: true,
-            maximumDc: 60,
-            bouncerPlus: true,
-            blacklistEnabled: true,
+            maximumAfk: 99999999999,
+            afkRemoval: false,
+            maximumDc: 120,
+            bouncerPlus: false,
+            blacklistEnabled: false,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: true,
+            cycleGuard: false,
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 10,
-            historySkip: false,
+            historySkip: true,
             timeGuard: true,
             maximumSongLength: 10,
             autodisable: true,
@@ -289,20 +289,20 @@
             ],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
-            motdEnabled: false,
+            motdEnabled: true,
             motdInterval: 5,
-            motd: "Temporary Message of the Day",
+            motd: "Dfield's Official Plug.DJ. Music 24/7!",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: null,
-            rulesLink: null,
+            rulesLink: "https://i.imgur.com/kJfzxue.png",
             themeLink: null,
             fbLink: null,
-            youtubeLink: null,
+            youtubeLink: "https://www.youtube.com/user/DfieldMark",
             website: null,
             intervalMessages: [],
-            messageInterval: 5,
+            messageInterval: 2,
             songstats: true,
             commandLiteral: "!",
             blacklists: {
@@ -312,7 +312,7 @@
             }
         },
         room: {
-            name: null,
+            name: "Dfieldmark",
             users: [],
             afkList: [],
             mutedUsers: [],
@@ -1686,8 +1686,8 @@
                     }
                 }
             },
-
-            autowootCommand: {
+			
+			autowootCommand: {
                 command: 'autowoot',
                 rank: 'user',
                 type: 'exact',
@@ -1699,6 +1699,8 @@
                     }
                 }
             },
+
+            
 
             baCommand: {
                 command: 'ba',
@@ -1836,8 +1838,8 @@
                     }
                 }
             },
-
-            botnameCommand: {
+			
+			botnameCommand: {
                 command: 'botname',
                 rank: 'manager',
                 type: 'startsWith',
@@ -1855,6 +1857,7 @@
                     }
                 }
             },
+            
 
             clearchatCommand: {
                 command: 'clearchat',
@@ -2094,16 +2097,16 @@
                         var ch = '/me @' + name + ' ';
                         switch(lang){
                             case 'en': break;
-                            case 'da': ch += 'Vær venlig at tale engelsk.'; break;
+                            case 'da': ch += 'VÃ¦r venlig at tale engelsk.'; break;
                             case 'de': ch += 'Bitte sprechen Sie Englisch.'; break;
-                            case 'es': ch += 'Por favor, hable Inglés.'; break;
-                            case 'fr': ch += 'Parlez anglais, s\'il vous plaît.'; break;
+                            case 'es': ch += 'Por favor, hable InglÃ©s.'; break;
+                            case 'fr': ch += 'Parlez anglais, s\'il vous plaÃ®t.'; break;
                             case 'nl': ch += 'Spreek Engels, alstublieft.'; break;
-                            case 'pl': ch += 'Proszę mówić po angielsku.'; break;
-                            case 'pt': ch += 'Por favor, fale Inglês.'; break;
-                            case 'sk': ch += 'Hovorte po anglicky, prosím.'; break;
-                            case 'cs': ch += 'Mluvte prosím anglicky.'; break;
-                            case 'sr': ch += 'Молим Вас, говорите енглески.'; break;
+                            case 'pl': ch += 'ProszÄ™ mÃ³wiÄ‡ po angielsku.'; break;
+                            case 'pt': ch += 'Por favor, fale InglÃªs.'; break;
+                            case 'sk': ch += 'Hovorte po anglicky, prosÃ­m.'; break;
+                            case 'cs': ch += 'Mluvte prosÃ­m anglicky.'; break;
+                            case 'sr': ch += 'ÐœÐ¾Ð»Ð¸Ð¼ Ð’Ð°Ñ, Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ñ‚Ðµ ÐµÐ½Ð³Ð»ÐµÑÐºÐ¸.'; break;
                         }
                         ch += ' English please.';
                         API.sendChat(ch);
@@ -2197,7 +2200,7 @@
 
             ghostbusterCommand: {
                 command: 'ghostbuster',
-                rank: 'user',
+                rank: 'manager',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2220,7 +2223,7 @@
 
             gifCommand: {
                 command: ['gif', 'giphy'],
-                rank: 'user',
+                rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2405,6 +2408,25 @@
 
             killCommand: {
                 command: 'kill',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        storeToStorage();
+                        sendToSocket();
+                        API.sendChat(basicBot.chat.kill);
+                        basicBot.disconnectAPI();
+                        setTimeout(function () {
+                            kill();
+                        }, 1000);
+                    }
+                }
+            },
+			
+			killCommand: {
+                command: 'kill',
                 rank: 'bouncer',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2469,7 +2491,7 @@
 
             linkCommand: {
                 command: 'link',
-                rank: 'user',
+                rank: 'residentdj',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
@@ -2635,8 +2657,8 @@
                     }
                 }
             },
-
-            logoutCommand: {
+			
+			logoutCommand: {
                 command: 'logout',
                 rank: 'manager',
                 type: 'exact',
@@ -2651,6 +2673,8 @@
                     }
                 }
             },
+
+            
 
             maxlengthCommand: {
                 command: 'maxlength',
@@ -2670,8 +2694,8 @@
                     }
                 }
             },
-
-            motdCommand: {
+			
+			motdCommand: {
                 command: 'motd',
                 rank: 'bouncer',
                 type: 'startsWith',
@@ -2694,6 +2718,8 @@
                     }
                 }
             },
+
+            
 
             moveCommand: {
                 command: 'move',
@@ -2844,8 +2870,8 @@
                     }
                 }
             },
-
-            refreshCommand: {
+			
+			refreshCommand: {
                 command: 'refresh',
                 rank: 'manager',
                 type: 'exact',
@@ -2863,6 +2889,8 @@
                     }
                 }
             },
+
+            
 
             reloadCommand: {
                 command: 'reload',
@@ -2953,7 +2981,7 @@
             rulesCommand: {
                 command: 'rules',
                 rank: 'user',
-                type: 'exact',
+                type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
@@ -3473,7 +3501,7 @@
 
             voteratioCommand: {
                 command: 'voteratio',
-                rank: 'bouncer',
+                rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
