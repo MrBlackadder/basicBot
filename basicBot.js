@@ -296,7 +296,7 @@
             etaRestriction: false,
             welcome: false,
             opLink: null,
-            rulesLink: "https://i.imgur.com/kJfzxue.png",
+            rulesLink: "http://justbobthings.com/i/rules.png",
             themeLink: null,
             fbLink: null,
             youtubeLink: "https://www.youtube.com/user/DfieldMark",
@@ -306,9 +306,9 @@
             songstats: true,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/BANNEDlist.json"
+                NSFW: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/NSFWlist.json",
+                OP: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/OPlist.json",
+                BANNED: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/BANNEDlist.json"
             }
         },
         room: {
