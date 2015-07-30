@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Basicbot by MrBlackadder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Basicbot</h1>
+      <h2 class="project-tagline">A not so basic bot edited for plug.dj/dfieldmark</h2>
+      <a href="https://github.com/MrBlackadder/basicBot" class="btn">View on GitHub</a>
+      <a href="https://github.com/MrBlackadder/basicBot/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/MrBlackadder/basicBot/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="basicbot" class="anchor" href="#basicbot" aria-hidden="true"><span class="octicon octicon-link"></span></a>basicBot</h1>
+
+<p>A not so basic bot edited for plug.dj/dfieldmark</p>
+
+<hr>
+
+<p><a href="https://gitter.im/Yemasthui/basicBot?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a> <a href="https://facebook.com/groups/basicBot"><img src="http://i.benzi.io/97dW.svg" alt="facebook group"></a> <a href="https://twitter.com/bscBt"><img src="http://i.benzi.io/4KEn.svg" alt="twitter"></a></p>
+
+<p>Stay updated on <strong>basicBot</strong>'s development by following the project on Twitter <a href="http://twitter.com/bscBt">@bscBt</a></p>
+
+<p>Created by <a href="https://github.com/Yemasthui">Yemasthui</a> but now maintained by <a href="https://github.com/Benzi">Benzi</a>.</p>
+
+<p>(You can email me via <a href="mailto:bnz.mngn@gmail.com">bnz.mngn@gmail.com</a> or send me a message on <a href="https://gitter.im/Benzi">Gitter</a> if you have any queries about the bot)</p>
+
+<h1></h1>
+
+<h2>
+<a id="important" class="anchor" href="#important" aria-hidden="true"><span class="octicon octicon-link"></span></a>IMPORTANT</h2>
+
+<p><strong>basicBot has been updated to work under plug's update. There may still be bugs and functionality is not guaranteed.</strong></p>
+
+<p><strong>Make sure to update your bookmark, as the link has changed recently!!!</strong></p>
+
+<p><strong>Important changes in version 2.x.x:</strong></p>
+
+<ul>
+<li>Now should be fully compatible with Firefox.</li>
+<li>You can now change the bot's name, no need to make a fork to change it anymore. Available under custom settings as "botName".</li>
+<li>The bot's variable is now exposed outside of the script. You can access it as the variable "bot" in the console. This should allow for secondary scripts extending the bot without the need to fork and lose support on its basis.
+Be careful when extending it to make sure commands or features interact properly with the rest of them.
+An example script to extend the bot is provided under exampleExtension.js. Please do not fork this repository to just change that file. Details of how to use are provided inside.
+This is NOT needed to run the bot as it is provided, only if you want to add functionality.</li>
+<li>Command checking has been reworked to facilitate adding commands through secondary scripts as explained above.</li>
+<li><strong>There is now support for custom chat messages. This means you can use your own custom wording or translate it into your own language.</strong></li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Bookmark the following code. To run the bot, run the bookmark.</p>
+
+<p><code>javascript:(function(){$.getScript('https://rawgit.com/Yemasthui/basicBot/master/basicBot.js');})();</code></p>
+
+<p>If this does not work, go to <a href="https://raw.githubusercontent.com/Yemasthui/basicBot/master/basicBot.js">https://raw.githubusercontent.com/Yemasthui/basicBot/master/basicBot.js</a> and copy paste its content into your console (accessible in chrome by pressing f12) when on plug.dj in your community.</p>
+
+<h3>
+<a id="commands" class="anchor" href="#commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Commands</h3>
+
+<p>These can be found in <a href="https://github.com/Yemasthui/basicBot/blob/master/commands.md">the commands file</a>.</p>
+
+<h3>
+<a id="blacklists" class="anchor" href="#blacklists" aria-hidden="true"><span class="octicon octicon-link"></span></a>Blacklists</h3>
+
+<p>Examples of blacklists can be found in <a href="https://github.com/Yemasthui/basicBot-customization/tree/master/blacklists">the customization repository</a>.
+You can add blacklists in the settings of the bot via the methods given in that same repository. See below for more information.</p>
+
+<h3>
+<a id="extending-functionality-and-custom-default-settings" class="anchor" href="#extending-functionality-and-custom-default-settings" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extending functionality and custom default settings</h3>
+
+<p>basicBot can be customized to fit your needs. Please refer to <a href="https://github.com/Yemasthui/basicBot-customization">the customization repository</a> for more info.
+Please do not try to if you are not confident in your javascript capabilities.</p>
+
+<h3>
+<a id="translations" class="anchor" href="#translations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations</h3>
+
+<p>Official translations will be supported. Available ones can be found under <a href="https://github.com/Yemasthui/basicBot/blob/master/lang/langIndex.json">the language folder</a>. You can set a language in the room settings.
+You can use your own translation or wording by translating the values of in <a href="https://github.com/Yemasthui/basicBot/blob/master/lang/en.json">the English pack</a> and uploading it to a public hosting service. Put the link into your custom room settings, under chatLink.</p>
+
+<p><strong>When translating the chat messages, please note that it is a json format, meaning it is structured as <code>"key":"value"</code>, please only translate the "value" parts, and leave anything between %% (eg. %%NAME%%) as is, they are variables that get filled in by the bot.</strong></p>
+
+<h3>
+<a id="command-autocomplete-plugin" class="anchor" href="#command-autocomplete-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command Autocomplete Plugin</h3>
+
+<p><a href="https://github.com/ExtPlug/advanced-autocomplete"><img src="http://i.imgur.com/hBMuB5F.png" alt="Command Autocomplete"></a></p>
+
+<p>Check out <a href="https://github.com/ExtPlug/advanced-autocomplete">this</a> helpful command autocomplete browser plugin by <a href="https://github.com/goto-bus-stop">goto-bus-stop</a> made to work with basicBot's commands.</p>
+
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>Credits</h2>
+
+<p>I would like to thank the following people:</p>
+
+<ul>
+<li>Fungus: His Tastybot has been a source of inspiration for most of the features, and his help with coding problems has been invaluable to make this bot.</li>
+<li>TAT, Origin and other Litebot contributors: Their Litebot has inspired features like Roulette.</li>
+<li>Henchman: Never knew this undertaking would give me a friend too.</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="center">Language</th>
+<th align="center">Translator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Portuguese</td>
+<td align="center"><a href="https://github.com/motelbible">Motel Bible</a></td>
+</tr>
+<tr>
+<td align="center">French</td>
+<td align="center"><a href="https://github.com/NDAthereal">NDA</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>(I would also like to thank everyone who contributed in translating the bot via the <a href="http://translate.benzi.io/admin/collaborators">translation centre</a>)</p>
+
+<h2>
+<a id="copyright" class="anchor" href="#copyright" aria-hidden="true"><span class="octicon octicon-link"></span></a>Copyright</h2>
+
+<p>Copyright © 2014 Yemasthui</p>
+
+<p>Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
+This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.</p>
+
+<h2>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disclaimer</h2>
+
+<p>This bot is developed independently. Changes may be made without notice. There is no guarantee for the bot to be functioning perfectly.
+Plug.dj admins have the right to request changes.
+By using this chatbot you agree to not use it for violating plug.dj's Terms of Service.
+You also agree not to alter the bot's code, unless in the cases explicitly stated above, for personal use, or for the sole purpose of submitting a pull request with a bug fix or a feature update, at which point it will be looked at and decided by the authors of the project.
+Please refer to the original author/repository at all times, even on personal forks that are not private.
+Any requests for changes can be requested via email, through github or via plug.dj.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/MrBlackadder/basicBot">Basicbot</a> is maintained by <a href="https://github.com/MrBlackadder">MrBlackadder</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
