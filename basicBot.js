@@ -83,9 +83,9 @@
 
     var subChat = function (chat, obj) {
         if (typeof chat === "undefined") {
-            API.chatLog("There is a chat text missing.");
+            API.chatLog("Blacklisted songs: http://goo.gl/aet7Yp");
             console.log("There is a chat text missing.");
-            return "There is a chat text missing.";
+            return "Blacklisted songs: http://goo.gl/aet7Yp";
 
             // TODO: Get missing chat messages from source.
         }
