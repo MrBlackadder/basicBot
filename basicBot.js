@@ -3073,6 +3073,35 @@
                     }
                 }
             },
+            
+            blacklistedCommand: {
+                command: ['blacklisted'],
+                rank: 'bouncer',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.room.skippable) {
+
+                            var timeLeft = API.getTimeRemaining();
+                            var timeElapsed = API.getTimeElapsed();
+                            var dj = API.getDJ();
+                            var name = dj.username;
+                            var msgSend = '@' + name + ', ';
+
+                            if (chat.message.length === cmd.length) {
+                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}));
+                            }
+                            
+                            
+                                
+                               
+                            }
+                        }
+                    }
+                }
+            },
 
             skipposCommand: {
                 command: 'skippos',
