@@ -250,7 +250,7 @@
         settings: {
             botName: "Minionsbot",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/MrBlackadder/basicBot/master/lang/en.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
