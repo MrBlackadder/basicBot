@@ -296,7 +296,7 @@
             etaRestriction: false,
             welcome: false,
             opLink: "http://goo.gl/aet7Yp",
-            rulesLink: "http://justbobthings.com/i/rules.png",
+            ruleLink: "http://justbobthings.com/i/rules.png",
             themeLink: null,
             fbLink: null,
             youtubeLink: "https://www.youtube.com/user/DfieldMark",
@@ -305,6 +305,7 @@
             messageInterval: 2,
             songstats: true,
             commandLiteral: "!",
+            seduceLink: "",
             blacklistedLink: "http://goo.gl/aet7Yp",
             blacklists: {
                 NSFW: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/NSFWlist.json",
@@ -1709,7 +1710,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(basicBot.chat.seduce);
+                        API.sendChat(subChat(basicBot.chat.seduce, {name: chat.un, link: basicBot.settings.seduceLink});
                     }
                 }
             },
@@ -3001,7 +3002,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         if (typeof basicBot.settings.rulesLink === "string")
-                            return API.sendChat(subChat(basicBot.chat.roomrules, {link: basicBot.settings.rulesLink}));
+                            return API.sendChat(subChat(basicBot.chat.roomrules, {link: basicBot.settings.ruleLink}));
                     }
                 }
             },
