@@ -305,6 +305,7 @@
             messageInterval: 2,
             songstats: true,
             commandLiteral: "!",
+            blacklistedLink: "http://goo.gl/aet7Yp",
             blacklists: {
                 NSFW: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/NSFWlist.json",
                 OP: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/OPlist.json",
@@ -3083,7 +3084,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         if (chat.message.length === cmd.length) {
-                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}))
+                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un, link: basicBot.settings.blacklistedLink}))
                             }
                     }
                 }
