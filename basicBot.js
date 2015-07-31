@@ -83,9 +83,9 @@
 
     var subChat = function (chat, obj) {
         if (typeof chat === "undefined") {
-            API.chatLog("There is a chat text missing.");
+            API.chatLog("Blacklisted songs: http://goo.gl/aet7Yp");
             console.log("There is a chat text missing.");
-            return "There is a chat text missing.";
+            return "Blacklisted songs: http://goo.gl/aet7Yp";
 
             // TODO: Get missing chat messages from source.
         }
@@ -250,10 +250,10 @@
         settings: {
             botName: "Minionsbot",
             language: "english",
-            chatLink: "https://rawgit.com/MrBlackadder/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 5, // 1-200
-            startupVolume: 0, // 0-100
+            startupVolume: 25, // 0-100
             startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
@@ -1777,7 +1777,7 @@
                         var msg = chat.message;
                         if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nolistspecified, {name: chat.un}));
                         var list = msg.substr(cmd.length + 1);
-                        if (typeof basicBot.room.blacklists[list] === 'undefined') return API.sendChat(subChat(basicBot.chat.invalidlistspecified, {name: chat.un});
+                        if (typeof basicBot.room.blacklists[list] === 'undefined') return API.sendChat(subChat(basicBot.chat.invalidlistspecified, {name: chat.un}));
                         else {
                             var media = API.getMedia();
                             var timeLeft = API.getTimeRemaining();
