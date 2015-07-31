@@ -85,7 +85,7 @@
         if (typeof chat === "undefined") {
             API.chatLog("There is a chat text missing.");
             console.log("There is a chat text missing.");
-            return "[Error] No text message found.";
+            return "Blacklisted songs: http://goo.gl/aet7Yp";
 
             // TODO: Get missing chat messages from source.
         }
