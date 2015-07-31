@@ -3084,7 +3084,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         if (chat.message.length === cmd.length) {
-                                API.chatLog("Blacklisted songs: http://goo.gl/aet7Yp");))
+                                API.chatLog("Blacklisted songs: http://goo.gl/aet7Yp");
                             }
                     }
                 }
