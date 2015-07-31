@@ -305,6 +305,7 @@
             messageInterval: 2,
             songstats: true,
             commandLiteral: "!",
+            seduceLink: "https://i.imgur.com/DQh9L8k.gif"
             blacklistedLink: "http://goo.gl/aet7Yp",
             blacklists: {
                 NSFW: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/NSFWlist.json",
@@ -1709,7 +1710,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat(basicBot.chat.seduce);
+                        API.sendChat(subChat(basicBot.chat.seduce, {name: chat.un, link: basicBot.settings.seduceLink}));
                     }
                 }
             },
@@ -2470,7 +2471,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/MrBlackadder/basicBot/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
