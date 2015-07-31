@@ -3082,17 +3082,9 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (basicBot.room.skippable) {
-
-                            if (chat.message.length === cmd.length) {
+                        if (chat.message.length === cmd.length) {
                                 API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}))
                             }
-                            
-                            
-                                
-                               
-                            
-                        }
                     }
                 }
             },
