@@ -241,7 +241,7 @@
         name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/MrBlackadder/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "https://goo.gl/DqxgPW",
         chatLink: "https://rawgit.com/MrBlackadder/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
