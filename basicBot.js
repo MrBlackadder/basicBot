@@ -295,7 +295,7 @@
             filterChat: true,
             etaRestriction: false,
             welcome: false,
-            opLink: null,
+            opLink: "https://docs.google.com/spreadsheets/d/1KSLOyizuq8k04syvfNyhi3TM9t-yOTJGhykEMSM_BtA/edit#gid=0",
             rulesLink: "http://justbobthings.com/i/rules.png",
             themeLink: null,
             fbLink: null,
