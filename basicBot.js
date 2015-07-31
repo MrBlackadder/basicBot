@@ -253,7 +253,7 @@
             chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 5, // 1-200
-            startupVolume: 25, // 0-100
+            startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
             autowoot: true,
             autoskip: false,
