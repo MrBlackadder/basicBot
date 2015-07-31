@@ -116,6 +116,7 @@
     "newblacklisted": "\/me [@%%NAME%%] This track belongs on the %%BLACKLIST%% blacklist! [ %%AUTHOR%% - %%TITLE%% - %%MID%% ]",
     "blinfo": "[@%%NAME%%] Blacklist Info - author: %%AUTHOR%%, title: %%TITLE%%, mid: %%SONGID%%",
     "blacklist": "blacklist",
+    "blacklisted": "\/me Blacklisted songs: %%LINK%%",
     "cycleguard": "cycleguard",
     "timeguard": "timeguard",
     "chatfilter": "chatfilter",
