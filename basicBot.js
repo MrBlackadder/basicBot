@@ -3085,13 +3085,13 @@
                         if (basicBot.room.skippable) {
 
                             if (chat.message.length === cmd.length) {
-                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}));
+                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}))
                             }
                             
                             
                                 
                                
-                            }
+                            
                         }
                     }
                 }
