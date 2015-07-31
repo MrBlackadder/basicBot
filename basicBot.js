@@ -3084,12 +3084,6 @@
                     else {
                         if (basicBot.room.skippable) {
 
-                            var timeLeft = API.getTimeRemaining();
-                            var timeElapsed = API.getTimeElapsed();
-                            var dj = API.getDJ();
-                            var name = dj.username;
-                            var msgSend = '@' + name + ', ';
-
                             if (chat.message.length === cmd.length) {
                                 API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un}));
                             }
