@@ -2304,7 +2304,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var link = "(Updated link coming soon)";
-                        API.sendChat(subChat({link: basicBot.settings.helplink}));
+                        API.sendChat(subChat({link: basicBot.settings.helpLink}));
                     }
                 }
             },
