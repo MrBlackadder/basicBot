@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, don't ask for skips.",
     "spam": "\/me @%%NAME%%, please don't spam.",
     "roomadvertising": "\/me @%%NAME%%, don't post links to other rooms please.",
-    "adfly": "\/me @%%NAME%%, please change your autowoot program. We suggest using Radiant: http:\/\/rcs.radiant.dj\/",
+    "adfly": "\/me @%%NAME%%, please change your autowoot program. We suggest PlugCubed: http:\/\/plugcubed.net\/",
     "validgiftags": "\/me [@%%NAME%%] http:\/\/i.giphy.com\/%%ID%%.gif [Tags: %%TAGS%%]",
     "invalidgiftags": "\/me [@%%NAME%%] Invalid tags, try something different. [Tags: %%TAGS%%]",
     "validgifrandom": "\/me [@%%NAME%%] http:\/\/i.giphy.com\/%%ID%%.gif [Random GIF]",
@@ -137,7 +137,7 @@
     "afkstatusreset": "\/me [@%%NAME%%] Reset the afk status of @%%USERNAME%%.",
     "inactivefor": "\/me [@%%NAME%%] @%%USERNAME%% has been inactive for %%TIME%%.",
     "inactivelonger": "\/me [@%%NAME%%] @%%USERNAME%% has been inactive longer than %%BOTNAME%%'s been online.",
-    "autowoot": "\/me We recommend Radiant for autowooting: http:\/\/rcs.radiant.dj\/",
+    "autowoot": "\/me We recommend PlugCubed for autowooting: http:\/\/plugcubed.net\/",
     "brandambassador": "\/me A Brand Ambassador is the voice of the plug.dj users. They promote events, engage the community and share the plug.dj message around the world. For more info: https:\/\/plug.dj\/ba",
     "bouncerplusrank": "\/me [@%%NAME%%] You have to be manager or up to enable Bouncer+.",
     "chatcleared": "\/me [@%%NAME%%] Cleared the chat.",
@@ -183,7 +183,6 @@
     "oplist": "\/me OP list: %%LINK%%",
     "pong": "\/me Pong!",
     "reload": "\/me Be right back.",
-    "namechange": "\/me What should Dfieldmark's bot new name be?",
     "removenotinwl": "\/me [@%%NAME%%] Specified user @%%USERNAME%% is not in the waitlist.",
     "roomrules": "\/me Please find the room rules here: %%LINK%%",
     "sessionstats": "\/me [@%%NAME%%] Total woots: %%WOOTS%%, total mehs: %%MEHS%%, total grabs: %%GRABS%%.",
@@ -202,7 +201,6 @@
     "commandscd": "\/me [@%%NAME%%] The cooldown for commands by users is now set to %%TIME%% seconds.",
     "voteratio": "\/me [@%%NAME%%] @%%USERNAME%% ~ woots: %%WOOT%%, mehs: %%MEHS%%, ratio (w\/m): %%RATIO%%.",
     "website": "\/me Please visit our website: %%LINK%%",
-    "youtube": "\/me [%%NAME%%] Subscribe to us on youtube: %%LINK%%",
-    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
-    "seduce": "\/me @%%NAMETO%%, %%NAMEFROM%% uses seduce %%LINK%%"
+    "youtube": "\/me [%%NAME%%] Subscribe to Dfield on youtube: %%LINK%%",
+    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M."
 }
