@@ -291,7 +291,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 5,
-            motd: "Dfield's Official Plug.DJ. Music 24/7!",
+            motd: "Dfield's Official Plug.DJ. Music 24/7! http://goo.gl/forms/QjfEbaCwyP",
             filterChat: true,
             etaRestriction: false,
             welcome: false,
