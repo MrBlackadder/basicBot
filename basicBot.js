@@ -3010,7 +3010,7 @@
                     }
                 }
             },
-            var test = "test"
+            
             testCommand: {
                 command: 'rules',
                 rank: 'bouncer',
@@ -3019,6 +3019,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
+                    	var test = "test"
                         if (typeof basicBot.settings.rulesLink === "string")
                             return API.sendChat(subChat(test));
                     }
