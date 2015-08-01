@@ -305,7 +305,6 @@
             messageInterval: 2,
             songstats: true,
             commandLiteral: "!",
-            seduceLink: "",
             blacklistedLink: "http://goo.gl/aet7Yp",
             blacklists: {
                 NSFW: "https://rawgit.com/MrBlackadder/basicBot-customization/master/blacklists/NSFWlist.json",
@@ -1702,18 +1701,7 @@
                 }
             },
             
-            seduceCommand: {
-                command: 'seduce',
-                rank: 'residentdj',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        API.sendChat(subChat(basicBot.chat.seduce, {name: chat.un, link: basicBot.settings.seduceLink});
-                    }
-                }
-            },
+            
 
             
 
