@@ -297,6 +297,7 @@
             welcome: false,
             opLink: "http://goo.gl/aet7Yp",
             ruleLink: "http://justbobthings.com/i/rules.png",
+            dorokLink: "http://www.justbobthings.com/beta/dorok.html",
             themeLink: null,
             fbLink: null,
             youtubeLink: "https://www.youtube.com/user/DfieldMark",
