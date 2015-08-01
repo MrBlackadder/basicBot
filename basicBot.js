@@ -3010,6 +3010,20 @@
                     }
                 }
             },
+            var test = "test"
+            testCommand: {
+                command: 'rules',
+                rank: 'bouncer',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.rulesLink === "string")
+                            return API.sendChat(subChat(test));
+                    }
+                }
+            },
 
             sessionstatsCommand: {
                 command: 'sessionstats',
