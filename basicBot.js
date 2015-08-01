@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/MrBlackadder/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -300,6 +300,7 @@
             dorokLink: "http://www.justbobthings.com/beta/dorok.html",
             helpLink: "https://goo.gl/6zMJnR",
             themeLink: null,
+            nameLink: "http://goo.gl/forms/QjfEbaCwyP",
             fbLink: null,
             youtubeLink: "https://www.youtube.com/user/DfieldMark",
             website: null,
@@ -3022,6 +3023,20 @@
                     	var test = "test"
                         if (typeof basicBot.settings.rulesLink === "string")
                             return API.sendChat(subChat(test));
+                    }
+                }
+            },
+            
+            namechangeCommand: {
+                command: 'namechange',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.rulesLink === "string")
+                            return API.sendChat(subChat(basicBot.chat.namechange, {link: basicBot.settings.nameLink}));
                     }
                 }
             },
