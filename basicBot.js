@@ -298,6 +298,7 @@
             opLink: "http://goo.gl/aet7Yp",
             ruleLink: "http://justbobthings.com/i/rules.png",
             dorokLink: "http://www.justbobthings.com/beta/dorok.html",
+            helpLink: "https://goo.gl/6zMJnR",
             themeLink: null,
             fbLink: null,
             youtubeLink: "https://www.youtube.com/user/DfieldMark",
@@ -2303,7 +2304,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         var link = "(Updated link coming soon)";
-                        API.sendChat(subChat(basicBot.chat.starterhelp, {link: link}));
+                        API.sendChat(subChat({link: basicBot.settings.helplink}));
                     }
                 }
             },
