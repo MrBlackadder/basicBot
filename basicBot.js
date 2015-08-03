@@ -83,9 +83,9 @@
 
     var subChat = function (chat, obj) {
         if (typeof chat === "undefined") {
-            API.chatLog("There is a chat text missing.");
+            API.chatLog("Blacklisted songs: http://goo.gl/aet7Yp");
             console.log("There is a chat text missing.");
-            return "There is a chat text missing.";
+            return "Blacklisted songs: http://goo.gl/aet7Yp";
 
             // TODO: Get missing chat messages from source.
         }
@@ -3118,9 +3118,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                    	var bl = "Blacklisted songs http://goo.gl/aet7Yp"
                         if (chat.message.length === cmd.length) {
-                                API.sendChat(subChat(bl))
+                                API.sendChat(subChat(basicBot.chat.blacklisted, {name: chat.un, link: basicBot.settings.blacklistedLink}))
                             }
                     }
                 }
