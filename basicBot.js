@@ -3013,7 +3013,7 @@
             },
             
             testCommand: {
-                command: 'rules',
+                command: 'test',
                 rank: 'bouncer',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
@@ -3022,7 +3022,7 @@
                     else {
                     	var test = "test"
                         if (typeof basicBot.settings.rulesLink === "string")
-                            return API.sendChat(subChat(test));
+                            return API.sendChat(subChat(This is a test));
                     }
                 }
             },
