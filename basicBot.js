@@ -3118,9 +3118,9 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                    	var bl = "Blacklisted songs"
+                    	var bl = "Blacklisted songs - http://goo.gl/aet7Yp"
                         if (chat.message.length === cmd.length) {
-                                API.sendChat(subChat(bl, {name: chat.un, link: basicBot.settings.blacklistedLink}))
+                                API.sendChat(subChat(bl))
                             }
                     }
                 }
