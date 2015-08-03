@@ -3006,8 +3006,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.rulesLink === "string")
-                            return API.sendChat(subChat({link: basicBot.settings.ruleLink}));
+                    	var dorok = "http://www.justbobthings.com/beta/dorok.html"
+                        return API.sendChat(subChat(dorok));
                     }
                 }
             },
