@@ -3020,9 +3020,9 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                    	var test = "test"
+                    	var test = "This is a test"
                         if (typeof basicBot.settings.rulesLink === "string")
-                            return API.sendChat(subChat(This is a test));
+                            return API.sendChat(subChat(test));
                     }
                 }
             },
