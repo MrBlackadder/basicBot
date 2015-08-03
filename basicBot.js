@@ -3049,8 +3049,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.rulesLink === "string")
-                            return API.sendChat(subChat(basicBot.chat.namechange, {link: basicBot.settings.nameLink}));
+                    	var name = "What should Dfield's Bot be called? http://goo.gl/forms/QjfEbaCwyP"
+                        return API.sendChat(subChat(name));
                     }
                 }
             },
