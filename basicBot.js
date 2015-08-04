@@ -3078,7 +3078,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                     	var bob = ":bob: :bob2: :bob3: :bobchamp: :facebob: :rapebob: :wtfbob: :wtfbob2"
-                        return API.sendChat(subChat(twitch));
+                        return API.sendChat(subChat(bob));
                     }
                 }
             },
