@@ -3012,6 +3012,20 @@
                 }
             },
             
+            seduceCommand: {
+                command: 'seduce',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                    	var sed = "@%%NAMETO%%, %%NAMEFROM%% seduces you. http://media.giphy.com/media/fUW4aQrf3qEBG/giphy.gif"
+                        return API.sendChat(subChat(sed, {nameto: user.username, namefrom: chat.un}));
+                    }
+                }
+            },
+            
             testCommand: {
                 command: 'test',
                 rank: 'bouncer',
