@@ -3047,8 +3047,6 @@
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    if {name: user.username} = "DJ_Blackadder";
-                    	return API.sendChat(subChat("Yo Adder"));
                     else {
                     	var test = "This is a test"
                         if (typeof basicBot.settings.rulesLink === "string")
