@@ -2304,7 +2304,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var link = "New plug.dj? Help is here! - https://goo.gl/6zMJnR";
+                        var link = "New to plug.dj? Help is here! - https://goo.gl/6zMJnR";
                         API.sendChat(subChat(link));
                     }
                 }
@@ -3063,7 +3063,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                    	var twitch = "Watch Dfield stream! - http://www.twitch.tv/dfieldmark"
+                    	var twitch = "Watch Dfield's stream! - http://www.twitch.tv/dfieldmark"
                         return API.sendChat(subChat(twitch));
                     }
                 }
