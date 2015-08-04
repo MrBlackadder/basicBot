@@ -3035,7 +3035,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                     	var nc = "Rule 13. http://gyazo.com/f7eaba5fd0ccc1f9958478df965d48ff"
-                        return API.sendChat(subChat(dorok));
+                        return API.sendChat(subChat(nc));
                     }
                 }
             },
