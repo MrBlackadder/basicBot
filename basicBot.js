@@ -3077,8 +3077,22 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                    	var bobe = ":bob: :bob2: :bob3: :bobchamp: :facebob: :rapebob: :wtfbob: :wtfbob2"
+                    	var bobe = ":bob: :bob2: :bob3: :bobchamp: :facebob: :rapebob: :wtfbob: :wtfbob2:"
                         return API.sendChat(subChat(bobe));
+                    }
+                }
+            },
+            
+            lauraCommand: {
+                command: 'laura',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                    	var laurae = ":lauralorette: :wtflauralorette: :lauralorette2: :lauralorette3: :lauralorette4:"
+                        return API.sendChat(subChat(laurae));
                     }
                 }
             },
