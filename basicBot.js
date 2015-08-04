@@ -3055,20 +3055,6 @@
                 }
             },
             
-            600Command: {
-                command: '600',
-                rank: 'user',
-                type: 'startsWith',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                    	var 600 = "http://i.gyazo.com/105b1d55da5eea950559ba06dd1df701.png"
-                        return API.sendChat(subChat(600));
-                    }
-                }
-            },
-            
             originCommand: {
                 command: 'origin',
                 rank: 'manager',
