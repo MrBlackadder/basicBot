@@ -291,6 +291,7 @@
             afkRankCheck: "ambassador",
             motdEnabled: true,
             motdInterval: 5,
+            rulesInterval: 1,
             motd: "Dfield's Official Plug.DJ. Music 24/7! http://goo.gl/forms/QjfEbaCwyP",
             filterChat: true,
             etaRestriction: false,
@@ -3037,6 +3038,24 @@
                     	var nc = "Rule 13. http://gyazo.com/f7eaba5fd0ccc1f9958478df965d48ff"
                         return API.sendChat(subChat(nc));
                     }
+                }
+            },
+            
+            rulesMessage: function () {
+                var rinterval;
+                if (basicBot.settings.motdEnabled) rinterval = basicBot.settings.rulesInterval;
+                else rinterval = basicBot.settings.messageInterval;
+                if ((basicBot.room.roomstats.songCount % rinterval) === 0 && basicBot.status) {
+                    var msg;
+                    if (basicBot.settings.motdEnabled) {
+                        msg = basicBot.settings.ruleLink;
+                    }
+                    else {
+                        if (basicBot.settings.intervalMessages.length === 0) return void (0);
+                        var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
+                        msg = basicBot.settings.intervalMessages[messageNumber];
+                    }
+                    API.sendChat('/me ' + msg);
                 }
             },
             
