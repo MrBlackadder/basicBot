@@ -3026,6 +3026,20 @@
                 }
             },
             
+            nightcoreCommand: {
+                command: 'nightcore',
+                rank: 'bouncer',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                    	var nc = "Rule 13. http://gyazo.com/f7eaba5fd0ccc1f9958478df965d48ff"
+                        return API.sendChat(subChat(dorok));
+                    }
+                }
+            },
+            
             testCommand: {
                 command: 'test',
                 rank: 'bouncer',
