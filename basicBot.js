@@ -3055,6 +3055,20 @@
                 }
             },
             
+            twitchCommand: {
+                command: 'twitch',
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                    	var twitch = "Watch Dfield stream! - http://www.twitch.tv/dfieldmark"
+                        return API.sendChat(subChat(twitch));
+                    }
+                }
+            },
+            
             rcsCommand: {
                 command: 'rcs',
                 rank: 'user',
