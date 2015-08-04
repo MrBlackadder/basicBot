@@ -2304,8 +2304,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var link = "https://goo.gl/6zMJnR";
-                        API.sendChat(subChat({link: link}));
+                        var link = "New plug.dj? Help is here! - https://goo.gl/6zMJnR";
+                        API.sendChat(subChat(link));
                     }
                 }
             },
