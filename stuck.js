@@ -1,5 +1,5 @@
 // timeout in seconds:
-var TIMEOUT = 0
+var TIMEOUT = 3
 
 var _timer
 API.on(API.ADVANCE, function () {
